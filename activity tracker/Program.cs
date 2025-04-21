@@ -1,8 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using activity_tracker.Models;
+using Websitetime2.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite("Data Source=DatabaseName.db"));
+builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlite("Data Source=Activities.db"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

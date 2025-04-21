@@ -1,8 +1,32 @@
-﻿@{
+﻿@model IEnumerable<activity_tracker.Models.Activities>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>all activities</h1>
+<a asp-action="add">add new activity</a>
+
+<table class="table">
+    <thead>
+
+
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var activities in Model)
+        {
+
+            <tr>
+                <td>@activities.Name</td>
+                <td>@activities.Date</td>
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>

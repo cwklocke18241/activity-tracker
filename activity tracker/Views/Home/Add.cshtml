@@ -1,0 +1,14 @@
+﻿@model Activities
+<h1>add new Activity</h1>
+
+<form method="post">
+	<label>what is the id (current priority)?</label>
+	<input asp-for="Id" />
+	<label>what is the activity?</label>
+	<input asp-for="Name" />
+	<br />
+	<label>when is the activity?</label>
+	<input asp-for="Date" />
+	<br />
+	<input type="submit" />
+</form>
